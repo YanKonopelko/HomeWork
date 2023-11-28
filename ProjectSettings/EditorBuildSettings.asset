@@ -12,9 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 57841bae8acf19f419a9b1904417bad3
   - enabled: 1
-    path: Assets/Scenes/ShapeShiftScene.unity
+    path: Assets/Scenes/Shape Shift.unity
     guid: 69df3ee1784ef0246b7bbfff4528e209
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: cfd596c8aa85cdf4890087ed701795dd
+  - enabled: 1
+    path: Assets/Scenes/Circle Hit.unity
+    guid: 6d104b8c69a3ebb49a04bd89505ac409
   m_configObjects: {}
