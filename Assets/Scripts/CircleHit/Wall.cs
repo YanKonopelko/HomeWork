@@ -1,9 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace SquareShift
+namespace CircleHit
 {
     public class Wall : MonoBehaviour
     {
@@ -14,10 +11,7 @@ namespace SquareShift
                 other.gameObject.GetComponent<Player>().Kill();
             }
         }
-
-        public void SelfDestroy()
-        {
-            Destroy(gameObject);
-        }
+        
     }
 }
+  

@@ -1,24 +1,27 @@
 using UnityEngine;
 
-public class SpawnTrigger : MonoBehaviour
+namespace SquareShift
 {
-    private void OnTriggerEnter(Collider other)
+    public class SpawnTrigger : MonoBehaviour
     {
-        if (other.CompareTag("Player"))
+        private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("Triggered");
-            LevelGenerator.instance.SpawnObstacle(transform.position.y+6f);
-            Destroy(gameObject);
+            if (other.CompareTag("Player"))
+            {
+                Debug.Log("Triggered");
+                LevelGenerator.instance.SpawnObstacle(transform.position.y + 6f);
+                Destroy(gameObject);
+            }
         }
-    }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log("Triggered");
-            LevelGenerator.instance.SpawnObstacle(transform.position.y+6f);
-            Destroy(gameObject);
+            if (other.CompareTag("Player"))
+            {
+                Debug.Log("Triggered");
+                LevelGenerator.instance.SpawnObstacle(transform.position.y + 6f);
+                Destroy(gameObject);
+            }
         }
     }
 }
