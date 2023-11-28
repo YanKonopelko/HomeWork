@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 namespace CircleHit
 {
@@ -33,19 +31,19 @@ public class ScorePoint : MonoBehaviour
     {
         if (other.collider.CompareTag("Player"))
         {
-            CircleHitScene.Intsance.AddScore(score);
-            SelfDestroy()
+            CircleHitScene.Instance.AddScore(score);
+            SelfDestroy();
+        }
+        if (other.collider.CompareTag("EnemyDestroyer"))
+        { 
+            SelfDestroy();
         }
     }
-    public SetScore(int Score){
+    public void SetScore(int Score){
         score = Score;
     }
-    private SelfDestroy(){
+    private void  SelfDestroy(){
         Destroy(gameObject);
-    }
-    public void SetSpeed(float speed)
-    {
-        moveSpeed = speed;
     }
 }
 }

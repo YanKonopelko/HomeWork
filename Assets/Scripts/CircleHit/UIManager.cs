@@ -6,16 +6,23 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
     [SerializeField] private Text scoreText;
-    [SerializeField] private Text newScoreText;
+    [SerializeField] private GameObject pauseScreen;
+
     private void Start()
     {
         Instance = this;
     }
-    public UpdateScoreText(int curentScore, int BestScore){
-        if(BestScore == curentScore){
-            newScoreText.text = BestScore.ToString()
+    public void UpdateScoreText(int currentScore, bool isBest){
+        scoreText.text = currentScore.ToString();
+        if(isBest)
+        {
+            scoreText.text = "New Score:\n" + currentScore.ToString();
         }
-        scoreText.text = curentScore;
+    }
+
+    public void Pause(bool isPaused)
+    {
+        pauseScreen.SetActive(isPaused);
     }
 }
 }

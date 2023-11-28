@@ -7,8 +7,9 @@ namespace CircleHit
     public class CircleHitScene : MonoBehaviour
     {
         public static CircleHitScene Instance;
-        private curentScore = 0;
-        private maxScore;
+        private int curentScore = 0;
+        private int maxScore;
+        private bool isPaused = false;
         private void Start()
         {
             Instance = this;
@@ -17,15 +18,31 @@ namespace CircleHit
 
         public void Lose()
         {
-            // ScenesManager.instance.LoadScene(SceneManager.GetActiveScene().name);
+            ScenesManager.instance.LoadScene(SceneManager.GetActiveScene().name);
         }
         public void AddScore(int Score){
             curentScore += Score;
+            UIManager.Instance.UpdateScoreText(curentScore,false);
             if(curentScore > maxScore){
                 maxScore = curentScore;
-                PlayerPrefs.SetInt("BestScore",maxScore);
+                UIManager.Instance.UpdateScoreText(curentScore,true);
+
+                PlayerPrefs.SetInt(PlayerPrefs.GetString("LastGame") + "BestScore",maxScore);
+                PlayerPrefs.SetInt("IsNewRecord",1);
+
             }
-            UIManager.Instance.UpdateScoreText(curentScore,maxScore);
+        }
+
+        public void Pause()
+        {
+            isPaused = !isPaused;
+            UIManager.Instance.Pause(isPaused);
+            Time.timeScale = isPaused ? 0 : 1;
+        }
+
+        public void ToMenu()
+        {
+            ScenesManager.instance.LoadScene("MainMenu");
         }
     }
 }
