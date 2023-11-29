@@ -339,6 +339,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (Legacy) (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 869393571898276720, guid: f779af8f9ac8b6f44b4965a8380e13d5, type: 3}
+      propertyPath: m_Text
+      value: Circle Hit
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f779af8f9ac8b6f44b4965a8380e13d5, type: 3}
 --- !u!1 &439392043
@@ -755,6 +759,10 @@ PrefabInstance:
     - target: {fileID: 869393571067593466, guid: f779af8f9ac8b6f44b4965a8380e13d5, type: 3}
       propertyPath: m_Name
       value: Button (Legacy)
+      objectReference: {fileID: 0}
+    - target: {fileID: 869393571898276720, guid: f779af8f9ac8b6f44b4965a8380e13d5, type: 3}
+      propertyPath: m_Text
+      value: Shape Shift
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f779af8f9ac8b6f44b4965a8380e13d5, type: 3}

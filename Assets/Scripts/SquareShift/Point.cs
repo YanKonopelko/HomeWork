@@ -8,11 +8,6 @@ namespace SquareShift
 {
     public class Point : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
 
         // Update is called once per frame
         private void OnCollisionEnter2D(Collision2D other)
@@ -27,7 +22,7 @@ namespace SquareShift
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                ShapeShiftScene.Instance.AddPoint();
+                ShapeShiftScene.Instance.AddScore(1);
                 SelfDesroy();
             }
         }

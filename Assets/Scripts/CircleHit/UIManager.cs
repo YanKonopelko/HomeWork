@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-namespace CircleHit
-{
+
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
@@ -24,5 +23,4 @@ public class UIManager : MonoBehaviour
     {
         pauseScreen.SetActive(isPaused);
     }
-}
 }

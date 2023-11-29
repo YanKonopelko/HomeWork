@@ -13,7 +13,7 @@ namespace CircleHit
         private void Start()
         {
             Instance = this;
-            maxScore = PlayerPrefs.HasKey("BestScore")?PlayerPrefs.GetInt("BestScore"):0;
+            maxScore = PlayerPrefs.HasKey(PlayerPrefs.GetString("LastGame") + "BestScore")?PlayerPrefs.GetInt(PlayerPrefs.GetString("LastGame") + "BestScore"):0;
         }
 
         public void Lose()
