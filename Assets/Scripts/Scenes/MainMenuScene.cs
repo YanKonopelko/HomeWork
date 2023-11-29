@@ -16,7 +16,8 @@ public class MainMenuScene : MonoBehaviour
         //MusicManager.instance.Swap(MusicManager.MusicType.MainMenuMusic,3);
         if (PlayerPrefs.GetInt("IsNewRecord") > 0)
         {
-            congratulationsText.text = "Cool, you have a new record in " + PlayerPrefs.GetString("LastGame") + " game."+"\n "+PlayerPrefs.GetInt(PlayerPrefs.GetString("LastGame") + "BestScore");
+            congratulationsText.text = "Cool, you have a new record in " + PlayerPrefs.GetString("LastGame") + " game"+"\n\n" +
+                                       " "+PlayerPrefs.GetInt(PlayerPrefs.GetString("LastGame") + "BestScore");
             CongratulationsScreen.SetActive(true);
         }
 

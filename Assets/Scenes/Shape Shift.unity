@@ -278,6 +278,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ShapeShiftScene, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 9114094926364017771, guid: fa757781e2268e24187de0a3cc04b928, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 9114094926364017771, guid: fa757781e2268e24187de0a3cc04b928, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9114094926366186695, guid: fa757781e2268e24187de0a3cc04b928, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 9114094926366186695, guid: fa757781e2268e24187de0a3cc04b928, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 9114094926366186697, guid: fa757781e2268e24187de0a3cc04b928, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -366,6 +382,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6039649887957569089}
     m_Modifications:
+    - target: {fileID: 869393571067593462, guid: f779af8f9ac8b6f44b4965a8380e13d5, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 869393571067593462, guid: f779af8f9ac8b6f44b4965a8380e13d5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8d4016c86092ca641bf4978b67a1a77b, type: 3}
     - target: {fileID: 869393571067593463, guid: f779af8f9ac8b6f44b4965a8380e13d5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -424,11 +448,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 869393571067593465, guid: f779af8f9ac8b6f44b4965a8380e13d5, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 300
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 869393571067593465, guid: f779af8f9ac8b6f44b4965a8380e13d5, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 869393571067593465, guid: f779af8f9ac8b6f44b4965a8380e13d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -481,6 +505,10 @@ PrefabInstance:
     - target: {fileID: 869393571067593466, guid: f779af8f9ac8b6f44b4965a8380e13d5, type: 3}
       propertyPath: m_Name
       value: Button (Legacy)
+      objectReference: {fileID: 0}
+    - target: {fileID: 869393571898276720, guid: f779af8f9ac8b6f44b4965a8380e13d5, type: 3}
+      propertyPath: m_Text
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f779af8f9ac8b6f44b4965a8380e13d5, type: 3}
@@ -900,7 +928,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 6039649887028996139}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8eb240ddf6a396b4d89186a061b3235a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -955,7 +983,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!212 &6039649887028996142
 SpriteRenderer:
@@ -1161,7 +1189,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!1 &6039649887738306264
 GameObject:
@@ -1258,7 +1286,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 6039649887738306264}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8eb240ddf6a396b4d89186a061b3235a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
