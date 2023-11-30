@@ -31,7 +31,7 @@ public class MusicManager : MonoBehaviour
         
         DontDestroyOnLoad(gameObject);
 
-        volume = PlayerPrefs.HasKey("MUSIC_VOLUME") ? PlayerPrefs.GetFloat("MUSIC_VOLUME") : 0.5f;
+        volume = PlayerPrefs.HasKey("MUSIC_VOLUME") ? PlayerPrefs.GetFloat("MUSIC_VOLUME") : 0.3f;
 
         Init();
 

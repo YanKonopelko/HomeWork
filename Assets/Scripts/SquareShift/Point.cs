@@ -8,16 +8,6 @@ namespace SquareShift
 {
     public class Point : MonoBehaviour
     {
-
-        // Update is called once per frame
-        private void OnCollisionEnter2D(Collision2D other)
-        {
-            if (other.gameObject.CompareTag("Player"))
-            {
-                other.gameObject.GetComponent<Player>().Kill();
-            }
-        }
-
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.gameObject.CompareTag("Player"))
@@ -27,9 +17,10 @@ namespace SquareShift
             }
         }
 
-        async void SelfDesroy()
+        void SelfDesroy()
         {
-            await Task.Delay(1);
+            // await Task.Delay(1);
+            SoundManager.instance.PlayAtPoint(SoundManager.SoundType.CollectSound,transform.position);
             Destroy(gameObject);
         }
     }

@@ -11,7 +11,9 @@ public class SoundManager : MonoBehaviour
 
     public enum SoundType
     {
-        ButtonSound
+        ButtonSound,
+        WinSound,
+        CollectSound
     }
     void Awake()
     {

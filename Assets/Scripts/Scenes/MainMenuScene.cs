@@ -13,12 +13,13 @@ public class MainMenuScene : MonoBehaviour
     private void Start()
     {
         // PlayerPrefs.DeleteAll();
-        //MusicManager.instance.Swap(MusicManager.MusicType.MainMenuMusic,3);
+        MusicManager.instance.Swap(MusicManager.MusicType.MainMenuMusic,3);
         if (PlayerPrefs.GetInt("IsNewRecord") > 0)
         {
             congratulationsText.text = "Cool, you have a new record in " + PlayerPrefs.GetString("LastGame") + " game"+"\n\n" +
                                        " "+PlayerPrefs.GetInt(PlayerPrefs.GetString("LastGame") + "BestScore");
             CongratulationsScreen.SetActive(true);
+            SoundManager.instance.PlaySound(SoundManager.SoundType.WinSound);
         }
 
     }
@@ -27,7 +28,7 @@ public class MainMenuScene : MonoBehaviour
     {
         ScenesManager.instance.LoadScene(gameSceneNames[SceneNum]);
         PlayerPrefs.SetString("LastGame",gameSceneNames[SceneNum]);
-        //MusicManager.instance.Swap(MusicManager.MusicType.InGameMusic,3);
+        MusicManager.instance.Swap(MusicManager.MusicType.InGameMusic,3);
     }
     public void ToSettings()
     {

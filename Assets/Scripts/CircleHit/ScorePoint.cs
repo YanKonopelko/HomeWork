@@ -31,8 +31,7 @@ public class ScorePoint : MonoBehaviour
     {
         if (other.collider.CompareTag("Player"))
         {
-            CircleHitScene.Instance.AddScore(score);
-            SelfDestroy();
+            Collect();
         }
         if (other.collider.CompareTag("EnemyDestroyer"))
         { 
@@ -44,6 +43,13 @@ public class ScorePoint : MonoBehaviour
     }
     private void  SelfDestroy(){
         Destroy(gameObject);
+    }
+
+    private void Collect()
+    {
+        CircleHitScene.Instance.AddScore(score);
+        SoundManager.instance.PlayAtPoint(SoundManager.SoundType.CollectSound,transform.position);
+        SelfDestroy();
     }
 }
 }
